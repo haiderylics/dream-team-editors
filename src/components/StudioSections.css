@@ -1,0 +1,69 @@
+/* Studio identity, client stories and people. */
+.client-stories { border-top: 1px solid var(--line); }
+.testimonial-demo { max-width: 280px; font-size: 14px; }
+.testimonial-stage { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(260px, 1fr); gap: 24px; }
+.testimonial-feature { padding: clamp(24px, 4vw, 60px); border: 1px solid #20b7ff45; background: linear-gradient(135deg, #0e2638, #09121d 65%); border-radius: 8px; min-width: 0; display: flex; flex-direction: column; }
+.testimonial-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: var(--blue); margin-bottom: 28px; }
+.testimonial-top span { font-size: 12px; letter-spacing: .1em; }
+.testimonial-text { animation: quote-in .4s ease; flex: 1; }
+.testimonial-text blockquote { margin: 0; font-size: clamp(28px, 3.1vw, 48px); line-height: 1.35; letter-spacing: -.025em; min-height: 4.1em; }
+.testimonial-person { display: flex; align-items: center; gap: 16px; margin-top: 36px; }
+.client-monogram { display: grid; place-items: center; flex-shrink: 0; width: 50px; height: 50px; border: 1px solid #20b7ff55; border-radius: 50%; font-family: var(--display); font-size: 28px; color: var(--blue); }
+.testimonial-person strong { display: block; font-size: 16px; font-weight: 500; }
+.testimonial-person div > span { display: block; font-size: 14px; color: var(--muted); margin-top: 5px; }
+.testimonial-controls { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 32px; display: flex; align-items: center; justify-content: space-between; }
+.testimonial-dots { display: flex; }
+.testimonial-dots button { display: grid; place-items: center; width: 36px; height: 44px; }
+.testimonial-dots span { width: 7px; height: 7px; background: #8798a4; border-radius: 10px; transition: width .25s, background .25s; }
+.testimonial-dots [aria-pressed="true"] span { width: 25px; background: var(--blue); }
+.testimonial-list { display: flex; flex-direction: column; gap: 12px; }
+.testimonial-choice { display: flex; align-items: center; text-align: left; gap: 16px; padding: 28px 24px; border: 1px solid var(--line); border-radius: 6px; background: #0a1017; transition: border-color .25s, background .25s; }
+.testimonial-choice.selected, .testimonial-choice:hover { border-color: #20b7ff77; background: #0c1a26; }
+.choice-number { color: var(--blue); font-family: var(--display); font-size: 25px; }
+.testimonial-choice strong { display: block; font-size: 16px; font-weight: 500; }
+.testimonial-choice small { display: block; color: var(--muted); font-size: 14px; margin-top: 7px; }
+.testimonial-choice svg { margin-left: auto; flex-shrink: 0; color: var(--muted); transition: transform .25s; }
+.testimonial-choice.selected svg { transform: rotate(45deg); color: var(--blue); }
+.testimonial-list > p { margin: auto 0 0; padding: 22px 4px 0; color: white; }
+.testimonial-list > p span { color: var(--muted); }
+.achievements { border-block: 1px solid var(--line); background: #080e15; }
+.achievement-intro { max-width: 350px; }
+.achievement-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-block: 1px solid var(--line); }
+.achievement-card { padding: 30px 24px 36px; border-right: 1px solid var(--line); min-width: 0; }
+.achievement-card:first-child { padding-left: 0; }
+.achievement-card:last-child { border-right: 0; }
+.achievement-caption { display: flex; align-items: center; gap: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.achievement-caption > span { color: var(--blue); }
+.achievement-value { display: block; font-family: var(--display); font-size: clamp(64px, 7.5vw, 112px); font-weight: 600; line-height: 1.2; margin: 18px 0 10px; font-variant-numeric: tabular-nums; letter-spacing: -.035em; white-space: nowrap; }
+.count-plus { color: var(--blue); font-size: .65em; vertical-align: top; }
+.achievement-world { min-height: clamp(76px, 9vw, 134px); margin: 18px 0 10px; display: flex; flex-direction: column; justify-content: center; gap: 8px; font-family: var(--display); font-size: clamp(32px, 3.4vw, 52px); line-height: 1; }
+.achievement-world svg { width: 28px; height: 28px; color: var(--blue); }
+.achievement-card p { color: #d1dbe3; font-size: 16px; }
+.team-intro { max-width: 400px; }
+.team-demo { display: block; color: #8e9daa; font-size: 13px; line-height: 1.7; margin-top: 16px; }
+.team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.team-card { border: 1px solid var(--line); background: #0a1017; border-radius: 6px; transition: transform .25s, border-color .25s, box-shadow .25s; transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); overflow: hidden; }
+.team-card:hover, .team-card:focus-within { border-color: #20b7ff80; box-shadow: 0 12px 40px #0005; }
+.team-portrait { position: relative; aspect-ratio: 4/5; overflow: hidden; background: radial-gradient(ellipse at 50% 25%, #21425a, #101b29 65%); }
+.team-card:nth-child(2) .team-portrait { background: radial-gradient(ellipse at 50% 25%, #243d61, #0f182a 65%); }
+.team-card:nth-child(3) .team-portrait { background: radial-gradient(ellipse at 50% 25%, #224449, #101d26 65%); }
+.team-card:nth-child(4) .team-portrait { background: radial-gradient(ellipse at 50% 25%, #313854, #131825 65%); }
+.team-portrait img { transition: transform .6s; object-position: center 25%; }
+.team-card:hover .team-portrait img { transform: scale(1.04); }
+.team-photo-placeholder { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; color: #9bb7c9; }
+.team-photo-placeholder span { font-size: 13px; }
+.team-number { position: absolute; top: 20px; left: 20px; font-size: 12px; letter-spacing: .13em; color: #acc3d3; }
+.team-specialty { position: absolute; bottom: 18px; left: 18px; right: 18px; text-align: center; font-size: 12px; border: 1px solid #ffffff25; background: #060d1780; padding: 9px; border-radius: 3px; }
+.team-info { padding: 24px 20px; }
+.team-role { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--blue); }
+.team-info h3 { font-family: var(--display); font-size: 30px; margin-top: 8px; }
+.team-toggle { display: flex; gap: 10px; align-items: center; font-size: 14px; color: #bac6d0; margin-top: 18px; min-height: 44px; text-align: left; }
+.team-toggle svg { border: 1px solid #ffffff35; box-sizing: content-box; border-radius: 50%; padding: 7px; transition: transform .25s; }
+.expanded .team-toggle svg { transform: rotate(45deg); color: var(--blue); }
+.team-bio { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 12px; }
+.team-bio p { font-size: 14px; }
+@media (max-width: 1100px) { .team-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; } .team-portrait { aspect-ratio: 5/4; } .testimonial-choice { padding: 22px 16px; gap: 12px; } }
+@media (max-width: 800px) { .testimonial-stage { grid-template-columns: 1fr; } .testimonial-list { display: none; } .achievement-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .achievement-card:nth-child(2) { border-right: 0; } .achievement-card:nth-child(3), .achievement-card:nth-child(4) { border-top: 1px solid var(--line); } .achievement-card:nth-child(3) { padding-left: 0; } .achievement-value { font-size: 80px; } .achievement-world { min-height: 96px; font-size: 40px; } .testimonial-text blockquote { min-height: 4.1em; } }
+@media (max-width: 540px) { .team-grid { grid-template-columns: 1fr; } .team-portrait { aspect-ratio: 5/4; } .team-info { padding: 24px; } .team-info h3 { font-size: 36px; } .testimonial-top span { max-width: 135px; text-align: right; line-height: 1.7; } .testimonial-text blockquote { font-size: 28px; min-height: 5.4em; } .testimonial-person { gap: 12px; } .testimonial-person div > span { font-size: 12px; } .testimonial-person strong { font-size: 14px; } .achievement-card { padding: 24px 12px; } .achievement-caption { font-size: 12px; letter-spacing: 0; gap: 8px; } .achievement-value { font-size: 65px; } .achievement-world { font-size: 33px; min-height: 78px; } .achievement-card p { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .team-card, .team-portrait img, .testimonial-text { transform: none !important; animation: none !important; transition: none !important; } }
+.motion-paused .team-card { transform: none; transition: none; }
